@@ -1,13 +1,18 @@
-{% extends "layout.html" %}
-{% block title %}Index{% endblock %}
-{% block head %}
-  {{ super() }}
-  <style type="text/css">
-    .important { color: #336699; }
-  </style>
-{% endblock %}
-{% block content %}
-  <h1>Index</h1>
-  <p class="important">
-    Welcome on my awesome homepage.
-{% endblock %}
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %}
+        <meta charset="UTF-8">
+        <link rel="icon" href="{{ url_for('static', filename='/images/siteLogo.png') }}" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/static/fonts/setup.css" rel="stylesheet" />
+        <link href="/static/styles/base-frontend.css" rel="stylesheet" />
+        {% endblock %}
+    </head>
+    <body>
+        <div class="content region">{% block content %}{% endblock %}</div>
+            {% include "footer.html" %}
+        </section>
+        </div>
+    </body>
+</html>
