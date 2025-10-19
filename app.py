@@ -1,7 +1,7 @@
 # save this as app.py
 from flask import Flask
-from .index import frontend
-from .login import Login
+from index import frontend
+from login import Login
 
 app = Flask(__name__)
 
