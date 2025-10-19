@@ -5,4 +5,4 @@ Login = Blueprint('Login', __name__)
 @Login.route('/')
 def home():
     data = {'message':""}
-    return render_template("Login.html", tdata = data)
+    return render_template("login.html", tdata = data)
