@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %}
+        <meta charset="UTF-8">
+        <link rel="icon" href="{{ url_for('static', filename='/images/siteLogo.png') }}" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/static/fonts/setup.css" rel="stylesheet" />
+        <link href="/static/styles/base-frontend.css" rel="stylesheet" />
+        {% endblock %}
+    </head>
+    <body>
+        <div class="content region">{% block content %}{% endblock %}</div>
+            {% include "Footer.html" %}
+        </section>
+        </div>
+    </body>
+</html>
