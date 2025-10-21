@@ -1,4 +1,5 @@
 from flask import Blueprint, render_template
+from db.user import user
 
 Login = Blueprint('Login', __name__)
 
