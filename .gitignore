@@ -1,2 +1,3 @@
 .vercel
 lenv
+.env
