@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, request
 from db.user import user
-
+user.createRootUser()
 Login = Blueprint('Login', __name__)
 
 @Login.route('/')
