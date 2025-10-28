@@ -1,4 +1,4 @@
-from .database import client
+from .database import engine
 
 class User:
     def __init__(self):

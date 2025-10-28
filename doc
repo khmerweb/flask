@@ -1,3 +1,4 @@
+source lenv/bin/activate
 myenv\Scripts\Activate.ps1
 pip freeze > requirements.txt
 flask run --debug

@@ -1,8 +1,13 @@
 import os
 from dotenv import load_dotenv
-from libsql_client import create_client_sync
+from sqlalchemy import create_engine
 
-url = os.getenv("TURSO_DATABASE_URL")
-auth_token = os.getenv("TURSO_AUTH_TOKEN")
+TURSO_DATABASE_URL = os.environ.get("TURSO_DATABASE_URL")
+TURSO_AUTH_TOKEN = os.environ.get("TURSO_AUTH_TOKEN")
 
-client = create_client_sync(url=url, auth_token=auth_token)
+engine = create_engine(
+    f"sqlite+{TURSO_DATABASE_URL}?secure=true",
+    connect_args={
+        "auth_token": TURSO_AUTH_TOKEN,
+    },
+)
